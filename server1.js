@@ -1,7 +1,8 @@
 const express = require('express');
+require('dotenv').config(); 
 const app = express();
 const db = require('./db'); // This connects to MongoDB
-
+// Load environment variables from .env file
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -16,7 +17,7 @@ app.use('/menuitem', menuItemsRoutes); // Use the menuItemsRoutes for handling m
 
 
 const mongoose = require('mongoose');
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -45,8 +46,8 @@ app.get('/', (req, res) => {
   res.send('Hello World, this is my first server friend!');
 });
 
-const server = app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+ app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
 
 
