@@ -1,0 +1,10 @@
+const notes = require('./notes.js');
+var _=require('lodash');
+console.log("This is a server file.");
+var age=notes.age;
+var name=notes.name;
+console.log("Name: " + name);
+console.log("Age: " + age);
+var data=["Amey", "John", "Doe", "Jane","John", 1,2,1,2,3,4,5,"Doe"];
+var filter=_.uniq(data);
+console.log("Unique Data: " + filter);
