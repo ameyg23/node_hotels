@@ -9,4 +9,5 @@ const menuItemSchema = new mongoose.Schema({
  num_sales: { type: Number, default: 0 },
 });
 const MenuItem = mongoose.model('MenuItem', menuItemSchema);
+//just a comment to check if the code is working
 module.exports = MenuItem;
